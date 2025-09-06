@@ -106,7 +106,9 @@ Backspace.addEventListener('click', () => {
     expression.textContent = expression.textContent.slice(0, expression.textContent.length - 1);
 })
 Equate.addEventListener('click', () => {
-    result.textContent=eval(expression.textContent);
+    let value = eval(expression.textContent);
+    result.textContent = parseFloat(value.toFixed(8));
 })
+
 
 
